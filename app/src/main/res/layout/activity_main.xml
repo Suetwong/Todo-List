@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--a title-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="My Todo List"
+            android:textSize="30sp"
+            android:gravity="center"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5">
+            <!--a edit text for user input-->
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:hint="Enter New Task"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:layout_weight="4"
+                android:id="@+id/new_item_et"
+                />
+
+            <!--a button for add the new todo task-->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text= "+"
+                android:textSize="30sp"
+                android:id="@+id/add_item_button"
+                ></Button>
+        </LinearLayout>
+
+        <!--a list view to show the all the to do list-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/todo_listview"
+                android:layout_width="match_parent"
+                android:layout_height="245dp"></ListView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
